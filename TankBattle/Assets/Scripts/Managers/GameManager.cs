@@ -2,6 +2,7 @@
 using System.Collections;
 //using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -66,7 +67,7 @@ public class GameManager : MonoBehaviour
 
         if (m_GameWinner != null)
         {
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
         else
         {
