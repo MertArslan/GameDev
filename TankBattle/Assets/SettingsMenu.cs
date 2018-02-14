@@ -50,6 +50,7 @@ public class SettingsMenu : MonoBehaviour {
 
     public void setResolution(int index)
     {
-        Screen.SetResolution(resolutions[index].width, resolutions[index].height, Screen.fullScreen);
+        Resolution newRes = resolutions[index];
+        Screen.SetResolution(newRes.width, newRes.height, Screen.fullScreen);
     }
 }
